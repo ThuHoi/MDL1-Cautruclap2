@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonaci</title>
+</head>
+<body>
+<h2>Enter the Limit of Finonaci Series</h2>
+<input id="h1" type="text">
+<input type="submit" onclick="Fibonaci()" value="Enter">
+<p>Result:</p>
+<p id="kq"></p>
+</body>
+</html>
+<script>
+    function timvitri() {
+        let a1 = 1;a2 = 1;
+        if (n == 1 && n%5==0) {
+            return 1;
+        }
+        let i = 3, a;
+        while (i <= n) {
+            a = a1 + a2;
+            a1 = a2;
+            a2 = a;
+            i++;
+        }
+        return a;
+    }
+
+    function Fibonaci() {
+        let str = " ";
+        let n = parseInt(document.getElementById('h1').value)
+        for (let i = 1; i <= n; i++) {
+            str += timvitri(i) + " , "
+        }
+        document.getElementById('kq').innerHTML = str
+    }
+
+
+</script>
